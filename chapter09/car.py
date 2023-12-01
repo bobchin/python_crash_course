@@ -28,6 +28,10 @@ class Car:
         else:
             print("走行距離は減らせません！")
 
+    def increment_odometer(self, km):
+        """指定された距離を走行距離に追加する"""
+        self.odometer_reading += km
+
 
 if __name__ == '__main__':
     my_new_car = Car('audi', 'a4', 2019)
@@ -39,5 +43,12 @@ if __name__ == '__main__':
 
     my_new_car.update_odometer(20)
 
+
+    my_used_car = Car('subaru', 'outback', 2015)
+    print(my_used_car.get_descriptive_name())
+    my_used_car.update_odometer(23_500)
+    my_used_car.read_odometer()
+    my_used_car.increment_odometer(100)
+    my_used_car.read_odometer()
 
 
