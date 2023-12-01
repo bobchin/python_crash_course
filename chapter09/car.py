@@ -18,11 +18,17 @@ class Car:
         """自動車の走行距離を出力する"""
         print(f"走行距離は{self.odometer_reading}kmです。")
 
+    def update_odometer(self, km):
+        """指定された値に走行距離を更新する"""
+        self.odometer_reading = km
+
 
 if __name__ == '__main__':
     my_new_car = Car('audi', 'a4', 2019)
     print(my_new_car.get_descriptive_name())
-    my_new_car.odometer_reading = 23
+
+    #my_new_car.odometer_reading = 23
+    my_new_car.update_odometer(23)
     my_new_car.read_odometer()
 
 
