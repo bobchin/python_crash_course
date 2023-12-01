@@ -19,8 +19,14 @@ class Car:
         print(f"走行距離は{self.odometer_reading}kmです。")
 
     def update_odometer(self, km):
-        """指定された値に走行距離を更新する"""
-        self.odometer_reading = km
+        """
+        指定された値に走行距離を更新します。
+        走行距離を減らそうとする処理は拒否します。
+        """
+        if km >= self.odometer_reading:
+            self.odometer_reading = km
+        else:
+            print("走行距離は減らせません！")
 
 
 if __name__ == '__main__':
@@ -31,6 +37,7 @@ if __name__ == '__main__':
     my_new_car.update_odometer(23)
     my_new_car.read_odometer()
 
+    my_new_car.update_odometer(20)
 
 
 
