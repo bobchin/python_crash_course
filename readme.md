@@ -6,3 +6,6 @@
 - [サンプルコード](https://github.com/takanory/saitan-python)
 - [原著](https://nostarch.com/python-crash-course-3rd-edition)
 - [github](https://github.com/ehmatthes/pcc_3e/)
+
+- [stack overflow](https://stackoverflow.com/)
+- [Python Doc](https://docs.python.org/ja/3/)
